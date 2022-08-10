@@ -1,0 +1,19 @@
+{
+	"name": "devcontainer",
+	"dockerComposeFile": "docker-compose.devContainer.yml",
+	"service": "app",
+	"workspaceFolder": "/devcontainer",
+
+	"settings": {
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+
+	],
+
+	"features": {
+		"docker-from-docker": "latest"
+	}
+
+}

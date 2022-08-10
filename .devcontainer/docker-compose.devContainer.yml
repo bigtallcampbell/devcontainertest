@@ -1,0 +1,18 @@
+version: "3"
+
+
+services:
+  app:
+    container_name: "devcontainer-example"
+    build:
+      context: .
+      dockerfile: Dockerfile.devContainer
+      args:
+        # Update 'VARIANT' to pick a version of .NET: 3.1-focal, 5.0-focal, 6.0-focal
+        VARIANT: "ubuntu-20.04"
+
+    volumes:
+      - ..:/devcontainer:cached
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
